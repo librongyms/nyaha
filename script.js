@@ -89,9 +89,19 @@ function showValentinePopup() {
   noBtn.style.fontSize = noSize + "px";
 
   yesBtn.onclick = () => {
-    valPopup.innerHTML = "<p>Yay! never doubted you a sec, baby 😍 💖 Happy Valentine's Day! 😍</p>";
-    valPopup.style.display = 'block';
-  };
+  valPopup.innerHTML = `
+    <p style="
+      font-family: 'Quicksand', sans-serif;
+      font-size: 28px;
+      color: #880e4f;
+      text-align: center;
+      line-height: 1.5;
+    ">
+      Yay! never doubted you a sec, baby 💗 Happy Valentine's Day! 
+    </p>
+  `;
+  valPopup.style.display = 'block';
+};
 
   noBtn.onmouseover = () => {
     noBtn.style.transform = `translateX(${Math.random() * 150 - 75}px) translateY(${Math.random() * 50 - 25}px)`;
