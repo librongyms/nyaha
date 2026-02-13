@@ -1,0 +1,110 @@
+body { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    font-family: 'Comic Sans MS', sans-serif; 
+    background-color: #fffde4; 
+}
+
+h1 { 
+    text-align: center; 
+    color: #ffed4e; 
+    text-shadow: 1px 1px 2px #fff9c4;
+}
+
+#game-board { 
+    display: grid; 
+    grid-template-columns: repeat(12, 50px); 
+    grid-template-rows: repeat(12, 50px); 
+    gap: 3px; 
+    margin-top: 20px;
+}
+
+.cell { 
+    width: 50px; 
+    height: 50px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 24px; 
+    border: 2px solid #e6d817; 
+    border-radius: 8px;
+}
+
+.cell img {
+    display: block;
+    margin: auto;
+    max-width: 40px;   
+    max-height: 40px;
+}
+
+.obstacle { 
+    background-color: #fff780; 
+    color: white; 
+    font-weight: bold;
+}
+
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff80ab;
+  color: white;
+  padding: 20px 30px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 100;
+  display: none;
+}
+
+#popup.show { display: block; }
+
+#valentine-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffe6f0;
+  color: #880e4f;
+  padding: 35px 50px;
+  border-radius: 20px;
+  text-align: left;
+  line-height: 1.6;
+  font-family: 'Allura', 'Parisienne', 'Alex Brush', cursive;
+  font-size: 28px;
+  font-weight: normal;
+  box-shadow: 0 10px 30px rgba(136, 14, 79, 0.3);
+  z-index: 200;
+  display: none;
+}
+
+#valentine-popup p {
+  margin: 12px 0;
+  padding-left: 8px;
+  font-family: inherit;
+}
+
+#valentine-popup button {
+  margin: 15px 10px 0 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#valentine-popup #yes-btn {
+  background-color: #f48fb1;
+  color: white;
+}
+
+#valentine-popup #no-btn {
+  background-color: #ffccbc;
+  color: #880e4f;
+}
